@@ -1,0 +1,183 @@
+.home-reviews {
+  padding-bottom: 32px;
+  .flow-next, .flow-back {display: none;}
+}
+
+.home-review-row {}
+.review-col {
+  padding-top: 20px;
+}
+.review-wrap {
+  background: var(--bg-white);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--stroke);
+  height: 100%;
+  display: block;
+  color: var(--text-tx-black);
+  &:hover {
+    color: var(--text-tx-black);
+  }
+
+  &:hover {
+    img {
+      transform:scale(1.05);
+    }
+  }
+  &__top {
+    position: relative;
+    &_label {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      span {
+        background: var(--foundation-yellow-light-hover);
+        width: 56px;
+        height: 56px;
+        border-radius: 100%;
+        position: relative;
+        &:before {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          color: var(--foundation-yellow-normal);
+          font-size: 31px;
+        }
+      }
+    }
+
+    &_img {
+      padding-top: 83.925%;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: 0.15s;
+      }
+    }
+  }
+  &__bottom {
+    padding: 11px 11px 20px 11px;
+    &_stars {
+      $starWidth:128px;
+      width: $starWidth;
+      height: 19px;
+      overflow: hidden;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 14'%3E%3Cpath fill='rgb(255,255,255)' stroke='rgb(255,180,0)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M7.2,1.3c0-0.1,0.1-0.1,0.1-0.2C7.4,1.1,7.4,1,7.5,1s0.1,0,0.2,0.1c0.1,0,0.1,0.1,0.1,0.2l1.4,3.4c0,0.1,0.1,0.1,0.1,0.2C9.4,4.9,9.4,5,9.5,5l3.7,0.3c0.3,0,0.5,0.4,0.2,0.7l-2.7,2.3l-0.1,0.1c0,0.1,0,0.1,0,0.2l0.9,3.6c0,0.1,0,0.1,0,0.2c0,0.1-0.1,0.1-0.1,0.2c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0-0.2-0.1l-3.3-1.9c-0.1,0-0.1-0.1-0.2-0.1s-0.1,0-0.2,0.1l-3.1,1.9c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0-0.2-0.1s-0.1-0.1-0.1-0.1c0-0.1,0-0.1,0-0.2l0.9-3.6c0-0.1,0-0.1,0-0.2C4.5,8.4,4.4,8.3,4.4,8.3L1.6,5.9c-0.1,0-0.1-0.1-0.1-0.2s0-0.1,0-0.2c0-0.1,0-0.2,0.1-0.2c0.1-0.1,0.1-0.1,0.2-0.1l3.7-0.3c0.1,0,0.1,0,0.2-0.1c0.1,0,0.1-0.1,0.1-0.2L7.2,1.3z'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-position: 0 50%;
+      > div {
+        width: calc(var(--vote-rating) * (#{$starWidth} / 5));
+        height: 100%;
+        position: relative;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 14'%3E%3Cpath fill='rgb(255,180,0)' stroke='rgb(255,180,0)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M7.2,1.3c0-0.1,0.1-0.1,0.1-0.2C7.4,1.1,7.4,1,7.5,1s0.1,0,0.2,0.1c0.1,0,0.1,0.1,0.1,0.2l1.4,3.4c0,0.1,0.1,0.1,0.1,0.2C9.4,4.9,9.4,5,9.5,5l3.7,0.3c0.3,0,0.5,0.4,0.2,0.7l-2.7,2.3l-0.1,0.1c0,0.1,0,0.1,0,0.2l0.9,3.6c0,0.1,0,0.1,0,0.2c0,0.1-0.1,0.1-0.1,0.2c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0-0.2-0.1l-3.3-1.9c-0.1,0-0.1-0.1-0.2-0.1s-0.1,0-0.2,0.1l-3.1,1.9c-0.1,0-0.1,0.1-0.2,0.1c-0.1,0-0.1,0-0.2-0.1s-0.1-0.1-0.1-0.1c0-0.1,0-0.1,0-0.2l0.9-3.6c0-0.1,0-0.1,0-0.2C4.5,8.4,4.4,8.3,4.4,8.3L1.6,5.9c-0.1,0-0.1-0.1-0.1-0.2s0-0.1,0-0.2c0-0.1,0-0.2,0.1-0.2c0.1-0.1,0.1-0.1,0.2-0.1l3.7-0.3c0.1,0,0.1,0,0.2-0.1c0.1,0,0.1-0.1,0.1-0.2L7.2,1.3z'/%3E%3C/svg%3E");
+        background-repeat: repeat-x;
+        background-position: 0 50%;
+      }
+
+    }
+    &_title_date {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      &_title {
+        font-weight: 600;
+      }
+      &_date {
+        font-size: 12px;
+        line-height: 120%;
+        color: var(--text-tx-light-grey);
+      }
+    }
+    &_review {
+      padding-top: 12px;
+      font-size: 14px;
+      line-height: 160%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .home-reviews {
+    margin-top: 32px;
+    padding-bottom: 24px;
+  }
+  .home-review-row {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 4px;
+    &.flow-slider {overflow-x: hidden;}
+  }
+  .review-col {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 8px;
+  }
+  .review-wrap {
+    width: 177px;
+    &__top {
+      &_label {display: none;}
+      &_img {
+        padding-top: 139px;
+      }
+    }
+    &__bottom {
+      padding: 10px 11px 7px 11px;
+      &_stars {
+        $starWidthMobile:96px;
+        width: $starWidthMobile;
+        height: 14px;
+        > div {
+          width: calc(var(--vote-rating) * (#{$starWidthMobile} / 5));
+        }
+      }
+      &_title_date {
+        padding-top: 16px;
+        &_title {
+          order: 2;
+          width: 100%;
+          padding-top: 2px;
+        }
+        &_date {
+          order: 1;
+          width: 100%;
+        }
+      }
+      &_review {
+        font-size: 12px;
+        line-height: 120%;
+        padding-top: 2px;
+        margin-top: 6px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        min-height: 97px;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width: 767px) {
+  .home-reviews {
+    margin-top: 0;
+  }
+}

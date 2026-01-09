@@ -1,0 +1,58 @@
+.header-mobile-nav-buttons {
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid var(--stroke);
+  &__items {
+    display: flex;
+
+  }
+  &__item {
+    flex: 1 0 0%;
+    text-align: center;
+    position: relative;
+    .icon {
+      position: relative;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 120%;
+      text-align: center;
+      padding: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      cursor: pointer;
+      align-items: flex-end;
+      justify-content: center;
+      height: 60px;
+      &:before {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        left: 50%;
+        margin-left: -12px;
+        top: 8px;
+        font-size: 20px;
+      }
+      &:hover, &:active {
+        color: var(--text-tx-red);
+        &:before {
+          color: var(--text-tx-red);
+        }
+      }
+
+
+    }
+    &.active {
+      .icon {
+        color: var(--text-tx-red);
+        &:before {
+          color: var(--text-tx-red);
+        }
+      }
+
+    }
+  }
+}

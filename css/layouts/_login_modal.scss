@@ -1,0 +1,54 @@
+.modal-login-restore-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -6px 0 -6px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -2px;
+  margin-bottom: 6px;
+  &__forgot, &__restore {
+    padding: 0 6px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 22px;
+
+  }
+  &__forgot {
+    font-size: 14px;
+    color: var(--text-tx-light-grey);
+  }
+  &__restore {
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-tx-red);
+    cursor: pointer;
+  }
+}
+.modal-login-register-link {
+  padding-top: 20px;
+  &__text {
+    font-size: 14px;
+    color: var(--text-tx-light-grey);
+    text-align: center;
+    line-height: 150%;
+  }
+  &__button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    span, a {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text-tx-red);
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      height: 38px;
+    }
+  }
+}
+

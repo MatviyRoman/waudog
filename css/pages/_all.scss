@@ -1,0 +1,144 @@
+.section-titles  {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 115%;
+  color: var(--text-tx-black);
+  text-align: center;
+}
+
+.section-go-to {
+  position: relative;
+  padding-right: 120px;
+  //padding-left: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  a {
+    position: relative;
+    padding-right: 32px;
+    color: var(--text-tx-red);
+    font-weight: 500;
+    &:before {
+      content: '\e91b';
+      font-size: 17px;
+      color: var(--text-tx-red);
+      right: 0;
+      font-weight: normal;
+    }
+    i {
+      font-style: normal;
+    }
+  }
+  .arrows-nav {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    margin-top: -22px;
+  }
+  .icon.ic-w-24.ic-abs-t:before {margin-top: -13px;}
+  &.all, &.all-type-2 {
+    height: 44px;
+    margin-top: 68px;
+    .section-go-to__title {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 135%;
+    }
+  }
+  &.all-type-2 {
+
+    gap:20px;
+    a {
+      margin-top: 2px;
+    }
+  }
+}
+
+.arrows-nav {
+  display: flex;
+}
+.arrow-nav-next, .arrow-nav-prev {
+  width: 48px;
+  height: 44px;
+  background: var(--bg-red-normal);
+  border-radius: 12px;
+  margin: 0 6px;
+  position: relative;
+  cursor: pointer;
+  &:before {
+    @include icon;
+    content: '\e91b';
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+  }
+  &.disabled {
+    opacity: 0.8;
+    background: var(--bg-red-disabled);
+    cursor: default;
+  }
+}
+.arrow-nav-next {
+  margin-right: 0;
+}
+.arrow-nav-prev {
+  margin-left: 0;
+  &:before {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 991px) {
+  .section-titles {
+    font-size: 36px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 55px;
+  }
+  .section-go-to {
+    .arrows-nav {
+      display: none;
+    }
+  }
+  .section-go-to.all, .section-go-to.all-type-2 {
+    margin-top: 24px;
+  }
+  .section-go-to {
+    padding-right: 0;
+    justify-content: space-between;
+    &.all-type-2 {
+      a {
+        margin-top: 0;
+        padding-right: 0;
+        font-size: 0;
+        height: 44px;
+        width: 48px;
+      }
+      .icon.ic-w-24.ic-abs-t:before {
+        margin-top: -12px;
+        right: 50%;
+        margin-right: -12px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-titles {
+    font-size: 24px;
+    min-height: 44px;
+    line-height: 135%;
+  }
+
+
+}

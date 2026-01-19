@@ -467,6 +467,143 @@ window.addEventListener("load", function() {
                 firstInit = false;
             }
         }
-
     }
 });
+
+
+// sliders
+const breakpoint = 992;
+const selectors = [
+  '#home-new-items__items',
+  '#slider-reviews',
+  '#home-blogs',
+  '#home-viewed-products'
+];
+
+function wrapSlides(selector) {
+  const container = document.querySelector(selector);
+  if (!container) return;
+
+  const existingWrapper = container.querySelector(':scope > .swiper-wrapper');
+
+  if (window.innerWidth >= breakpoint) {
+    if (!existingWrapper) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'swiper-wrapper';
+
+      while (container.firstChild) {
+        wrapper.appendChild(container.firstChild);
+      }
+
+      container.appendChild(wrapper);
+    }
+  } else {
+    if (existingWrapper) {
+      while (existingWrapper.firstChild) {
+        container.appendChild(existingWrapper.firstChild);
+      }
+      existingWrapper.remove();
+    }
+  }
+}
+
+function handleResize() {
+  selectors.forEach(wrapSlides);
+}
+
+window.addEventListener('resize', handleResize);
+document.addEventListener('DOMContentLoaded', handleResize);
+
+
+// sliders
+const swipers = {};
+
+function initSwiperIfReady(selector, options) {
+  const container = document.querySelector(selector);
+  if (!container) return;
+
+  const hasWrapper = container.querySelector(':scope > .swiper-wrapper');
+  if (!hasWrapper) return;
+
+  if (window.innerWidth >= 992 && !swipers[selector]) {
+    const nav = container.closest('section') || container;
+
+    swipers[selector] = new Swiper(container, {
+      ...options,
+      navigation: {
+        nextEl: nav.querySelector('.arrow-nav-next'),
+        prevEl: nav.querySelector('.arrow-nav-prev'),
+        disabledClass: 'disabled'
+      }
+    });
+  }
+}
+
+function initSliders() {
+    initSwiperIfReady('#home-new-items__items', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        grabCursor: true,
+        navigation: {
+        nextEl: '.home-new-items .arrow-nav-next',
+        prevEl: '.home-new-items .arrow-nav-prev',
+        disabledClass: 'disabled'
+        },
+        breakpoints: {
+        0: { enabled: false },
+        992: { slidesPerView: 3, spaceBetween: 20 },
+        1400: { slidesPerView: 4, spaceBetween: 20 }
+        }
+    });
+
+    initSwiperIfReady('#slider-reviews', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+        nextEl: '.home-reviews .arrow-nav-next',
+        prevEl: '.home-reviews .arrow-nav-prev',
+        disabledClass: 'disabled'
+        },
+        breakpoints: {
+        0: { enabled: false },
+        992: { slidesPerView: 3, spaceBetween: 20 },
+        1400: { slidesPerView: 4, spaceBetween: 20 }
+        }
+    });
+
+    initSwiperIfReady('#home-blogs', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+        nextEl: '.home-blogs .arrow-nav-next',
+        prevEl: '.home-blogs .arrow-nav-prev',
+        disabledClass: 'disabled'
+        },
+        breakpoints: {
+        0: { enabled: false },
+        992: { slidesPerView: 3, spaceBetween: 20 },
+        1400: { slidesPerView: 4, spaceBetween: 20 }
+        }
+    });
+
+    initSwiperIfReady('#home-viewed-products', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+        nextEl: '.home-viewed-products .arrow-nav-next',
+        prevEl: '.home-viewed-products .arrow-nav-prev',
+        disabledClass: 'disabled'
+        },
+        breakpoints: {
+        0: { enabled: false },
+        992: { slidesPerView: 3, spaceBetween: 20 },
+        1400: { slidesPerView: 4, spaceBetween: 20 }
+        }
+    });
+}
+
+window.addEventListener('resize', initSliders);
+document.addEventListener('DOMContentLoaded', initSliders);

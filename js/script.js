@@ -550,9 +550,19 @@ function initSliders() {
         disabledClass: 'disabled'
         },
         breakpoints: {
-        0: { enabled: false },
-        992: { slidesPerView: 3, spaceBetween: 20 },
-        1400: { slidesPerView: 4, spaceBetween: 20 }
+            0: { enabled: false },
+            992: { 
+                slidesPerView: 3, 
+                spaceBetween: 20,
+                allowTouchMove: true,
+                grabCursor: true
+            },
+            1400: { 
+                slidesPerView: 4, 
+                spaceBetween: 20,
+                allowTouchMove: false,
+                grabCursor: false
+            }
         }
     });
 
@@ -566,9 +576,19 @@ function initSliders() {
         disabledClass: 'disabled'
         },
         breakpoints: {
-        0: { enabled: false },
-        992: { slidesPerView: 3, spaceBetween: 20 },
-        1400: { slidesPerView: 4, spaceBetween: 20 }
+            0: { enabled: false },
+            992: { 
+                slidesPerView: 3, 
+                spaceBetween: 20,
+                allowTouchMove: true,
+                grabCursor: true
+            },
+            1400: { 
+                slidesPerView: 4, 
+                spaceBetween: 20,
+                allowTouchMove: false,
+                grabCursor: false
+            }
         }
     });
 
@@ -582,9 +602,19 @@ function initSliders() {
         disabledClass: 'disabled'
         },
         breakpoints: {
-        0: { enabled: false },
-        992: { slidesPerView: 3, spaceBetween: 20 },
-        1400: { slidesPerView: 4, spaceBetween: 20 }
+            0: { enabled: false },
+            992: { 
+                slidesPerView: 3, 
+                spaceBetween: 20,
+                allowTouchMove: true,
+                grabCursor: true
+            },
+            1400: { 
+                slidesPerView: 3, 
+                spaceBetween: 20,
+                allowTouchMove: false,
+                grabCursor: false
+            }
         }
     });
 
@@ -598,9 +628,19 @@ function initSliders() {
         disabledClass: 'disabled'
         },
         breakpoints: {
-        0: { enabled: false },
-        992: { slidesPerView: 3, spaceBetween: 20 },
-        1400: { slidesPerView: 4, spaceBetween: 20 }
+            0: { enabled: false },
+            992: { 
+                slidesPerView: 3, 
+                spaceBetween: 20,
+                allowTouchMove: true,
+                grabCursor: true
+            },
+            1400: { 
+                slidesPerView: 4, 
+                spaceBetween: 20,
+                allowTouchMove: false,
+                grabCursor: false
+            }
         }
     });
 }

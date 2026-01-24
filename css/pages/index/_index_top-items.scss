@@ -7,6 +7,13 @@
 }
 .top-items-col {
   padding-top: 20px;
+  
+  @media (min-width: 992px) {
+    &:hover .top-items-wrap {
+      border: 1px solid var(--text-tx-black);
+      border-radius: 12px;
+    }
+  }
 }
 .top-items-wrap {
   border-top-left-radius: 12px;
@@ -18,7 +25,7 @@
   text-align: center;
   &:hover {
     img {
-      transform:scale(1.05);
+      transform:scale(1.2);
     }
   }
 
@@ -80,7 +87,8 @@
   }
   .top-items-wrap {
     //width: 320px;
-    border: 1px solid var(--stroke-black);
+    // border: 1px solid var(--stroke-black);
+    border: none;
     border-radius: 8px;
     font-size: 20px;
     width: 320px;

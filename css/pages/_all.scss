@@ -85,6 +85,9 @@
     background: var(--bg-red-disabled);
     cursor: default;
   }
+  &:hover:not(.disabled) {
+    background: var(--bg-red-hover);
+  }
 }
 .arrow-nav-next {
   margin-right: 0;

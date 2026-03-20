@@ -1,0 +1,116 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    margin-top: 20px;
+
+    @media (max-width: 575px) {
+        display: none;
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover:not(.disabled) {
+            border-radius: var(--radius-4, 4px);
+            border: 1px solid var(--Stroke-Normal, #F00000);
+            background-color: transparent;
+
+            svg {
+                path {
+                    fill: var(--Stroke-Normal, #F00000);
+                }
+            }
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+            border-radius: var(--radius-4, 4px);
+            border: 1px solid var(--Stroke-Light-Grey, #C8C8C8);
+            opacity: 0.5;
+            background: var(--bg-white, #fff);
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__numbers {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 44px;
+        height: 44px;
+        padding: 0 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background: #fff;
+        color: #333;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+
+        &:hover {
+            border-radius: var(--radius-4, 4px);
+            border: 1px solid var(--Stroke-Normal, #F00000);
+        }
+
+        &.active {
+            background: #ff0000;
+            color: #fff;
+            border-color: #ff0000;
+            cursor: default;
+
+            &:hover {
+                background: #ff0000;
+                border-color: #ff0000;
+            }
+        }
+    }
+
+    &__dots {
+        color: #999;
+        padding: 0 4px;
+        font-weight: 500;
+
+        color: var(--Text-tx-light-grey, #8C8C8C);
+        text-align: center;
+        /* Body M/semibold */
+        font-family: var(--font-family-Font-1, Montserrat);
+        font-size: var(--font-size-16, 16px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+
+.viewed-products__pagination_info {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+
+    span {
+        font-weight: 600;
+        color: #333;
+    }
+}

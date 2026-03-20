@@ -8,7 +8,6 @@
 
 
 
-
 body, html {
   overflow-x: hidden;
   min-width: 350px;
@@ -162,9 +161,9 @@ main {
 
 @import "layouts/header";
 
-
 @import "pages/all";
 @import "pages/index/index";
+@import "pages/viewed-products/viewed-products";
 @import "layouts/items";
 @import "layouts/items-blog";
 

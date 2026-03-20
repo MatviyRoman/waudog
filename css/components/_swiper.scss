@@ -1,0 +1,33 @@
+// Swiper стилі для слайдера
+
+@media (min-width: 992px) {
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    flex-shrink: 0;
+    width: auto;
+
+    @media (min-width: 1399px) {
+      width: calc(25% - 24px); // 4 слайди в ряд
+      max-width: 328.5px;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      width: calc(25% - 24px); // 4 слайди в ряд
+      max-width: 373.33px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+      width: calc(33% - 24px); // 3 слайди в ряд
+      max-width: 330.66px;
+    }
+  }
+
+  // Зберігаємо оригінальні стилі .item-wrap
+  .swiper-slide .item-wrap {
+    height: 100%;
+  }
+}

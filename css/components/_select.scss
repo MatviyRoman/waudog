@@ -1,0 +1,118 @@
+.viewed-products__sort {
+    position: relative;
+
+    color: var(--Text-tx-grey, #616161);
+
+    /* Body M/medium */
+    font-family: var(--font-family-Font-1, Montserrat);
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 25.6px */
+}
+
+.custom-select {
+    position: relative;
+    display: inline-block;
+    min-width: 146px;
+
+    @media (max-width: 575px) {
+        min-width: 103px;
+    }
+}
+
+.select-selected {
+    background: transparent;
+    border-radius: 8px;
+    padding: 8px 32px 8px 12px;
+    cursor: pointer;
+    position: relative;
+
+    color: var(--Text-tx-red, #F00000);
+    text-align: center;
+
+    /* Body M/medium */
+    font-family: var(--font-family-Font-1, Montserrat);
+    font-size: var(--font-size-16, 16px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 25.6px */
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 9%; /* 1.44px */
+    text-underline-offset: 7.5%; /* 1.2px */
+    text-underline-position: from-font;
+
+    @media (max-width: 575px) {
+        padding: 4px;
+    }
+
+    svg {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 17px;
+        height: 9px;
+        stroke: #F00000; // колір з SVG
+        stroke-width: 1;
+        transition: transform 0.2s ease;
+
+        @media (max-width: 575px) {
+            display: none;
+        }
+
+        path {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    }
+}
+
+.select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #f8f9fa;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 10;
+
+    border-radius: var(--radius-6, 6px);
+    background: var(--BG-White, #FFF);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+
+    div {
+        padding: 12px;
+        cursor: pointer;
+        transition: background 0.2s;
+
+        display: flex;
+        min-width: var(--width-40, 40px);
+        padding: var(--Gap-4, 4px) 12px;
+        align-items: center;
+        gap: 8px;
+        align-self: stretch;
+
+        &:hover {
+            background: #e9ecef;
+        }
+
+        @media (max-width: 575px) {
+            font-size: var(--font-size-14, 14px);
+            padding: 4px;
+        }
+    }
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-arrow-active svg {
+    transform: translateY(-50%) rotate(180deg); // перевертаємо стрілку догори
+}

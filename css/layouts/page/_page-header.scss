@@ -1,0 +1,101 @@
+.page-header {
+    display: flex;
+    padding: var(--Gap-16, 16px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+
+    @media (max-width: 991px) {
+        padding: 0;
+        background: var(--BG-White, #FFF);
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: 575px) {
+        margin-bottom: 0;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        min-height: 60px;
+    }
+
+    &__title {
+        color: var(--Text-tx-black, #000);
+
+        /* H4/semi-bold */
+        font-family: var(--font-family-Font-1, Montserrat);
+        font-size: var(--font-size-32, 32px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 38.4px */
+
+        @media (max-width: 767px) {
+            color: var(--Text-tx-black, #000);
+
+            /* H5/semi-bold */
+            font-family: var(--font-family-Font-1, Montserrat);
+            font-size: var(--font-size-26, 24px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 135%; /* 32.4px */
+        }
+    }
+
+    &__breadcrumb {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #666;
+
+        a {
+            color: var(--Text-tx-red, #F00000);
+
+            /* Body S/medium */
+            font-family: var(--font-family-Font-1, Montserrat);
+            font-size: var(--font-size-14, 14px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 22.4px */
+
+            display: flex;
+            padding: var(--Gap-8, 8px) var(--Gap-12, 12px);
+            justify-content: center;
+            align-items: center;
+            gap: var(--Gap-8, 8px);
+
+            &:hover {
+                border-radius: var(--radius-12, 12px);
+                color: var(--bg-red-hover);
+            }
+        }
+    }
+
+    &__breadcrumb_separator {
+        color: var(--Icon-ic-red, #F00000);
+        /* H6/semi-bold */
+        font-family: var(--font-family-Font-1, Montserrat);
+        font-size: var(--font-size-22, 22px);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+    }
+
+    &__breadcrumb_current {
+        display: flex;
+        padding: var(--Gap-8, 8px) var(--Gap-12, 12px);
+        justify-content: center;
+        align-items: center;
+        gap: var(--Gap-8, 8px);
+
+        color: var(--Text-tx-black, #000);
+        /* Body S/medium */
+        font-family: var(--font-family-Font-1, Montserrat);
+        font-size: var(--font-size-14, 14px);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 22.4px */
+    }
+}

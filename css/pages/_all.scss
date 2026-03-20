@@ -99,6 +99,8 @@
   }
 }
 
+@import "_404.scss";
+
 @media (max-width: 991px) {
   .section-titles {
     font-size: 36px;
@@ -142,6 +144,4 @@
     min-height: 44px;
     line-height: 135%;
   }
-
-
 }

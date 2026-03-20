@@ -136,7 +136,9 @@
         align-items: center;
         justify-content: center;
         color: var(--icon-ic-red);
-
+      }
+      &:hover {
+        color: var(--text-tx-red);
       }
     }
     &_lang {

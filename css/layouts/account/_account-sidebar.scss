@@ -1,0 +1,109 @@
+.account-sidebar {
+    border-radius: var(--radius-8, 8px);
+    background: #FFF;
+
+    display: flex;
+    // max-width: 300px;
+    width: 100%;
+    padding: var(--Gap-8, 8px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Gap-8, 8px);
+
+    @media (max-width: 991px) {
+        width: 100%;
+        max-width: none;
+        overflow-x: hidden;
+    }
+
+    &__menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @media (max-width: 991px) {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto; // дозволяємо горизонтальний скрол
+            overflow-y: hidden; // щоб не з’являвся вертикальний скрол
+            -webkit-overflow-scrolling: touch; // приємний скрол на iOS
+            width: 100%;
+        }
+
+        li {
+            @media (max-width: 991px) {
+                flex: 0 0 auto; // щоб елементи не стискались, а виходили за екран
+                margin-bottom: 0;
+            }
+        }
+
+        .account-sidebar {
+            &__link {
+                display: flex;
+                min-width: var(--width-40, 40px);
+                padding: 8px 12px;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+
+                color: var(--Text-tx-black, #000);
+                text-align: center;
+                /* Body M/medium */
+                font-family: var(--font-family-Font-1, Montserrat);
+                font-size: var(--font-size-16, 16px);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%;
+                /* 25.6px */
+
+                text-align: left;
+            }
+        }
+
+        li {
+            &.active {
+                @media (max-width: 991px) {
+                    border-radius: var(--radius-100, 100px);
+                    background: var(--BG-Grey-Light, #F8F9FD);
+                }
+
+                .account-sidebar {
+                    &__link {
+                        color: var(--Text-tx-red, #F00000);
+                        text-align: center;
+                        /* Body M/medium */
+                        font-family: var(--font-family-Font-1, Montserrat);
+                        font-size: var(--font-size-16, 16px);
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 160%;
+                        /* 25.6px */
+                        background-color: transparent;
+
+                        text-align: left;
+
+                        svg {
+                            path {
+                                stroke: var(--Text-tx-red, #F00000) !important;
+                                stroke: #F00000 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar-sticky {
+    @media (min-width: 992px) {
+        position: sticky;
+        top: 0px;
+    }
+}
+
+main, body {
+    @media (min-width: 992px) {
+        overflow: visible !important;
+    }
+}

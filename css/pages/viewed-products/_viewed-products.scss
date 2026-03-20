@@ -1,0 +1,48 @@
+@import "layouts/account/account-sidebar";
+@import "layouts/page/page-header";
+@import "components/_pagination";
+@import "components/_select";
+
+.viewed-products {
+    overflow: visible;
+
+    &__sort {
+        display: flex;
+        align-items: center;
+
+        span {
+            @media (max-width: 575px) {
+                display: none;
+            }
+        }
+    }
+
+    &__header {
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 991px) {
+            flex-direction: row;
+        }
+    }
+
+    .btn-load-more {
+        @media (min-width: 576px) {
+            display: none;
+        }
+
+        @media (max-width: 575px) {
+            display: block;
+            width: 100%;
+            margin-top: 40px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.home-viewed-products {
+    overflow: hidden;
+}

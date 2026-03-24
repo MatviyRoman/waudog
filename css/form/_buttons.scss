@@ -24,6 +24,13 @@
     color: var(--text-tx-white);
   }
 }
+
+.btn-xs {
+  height: 100%;
+  min-height: 22px;
+  font-size: 12px;
+}
+
 .btn-small {
   height: 38px;
   font-size: 14px;
@@ -40,7 +47,6 @@
   font-size: 22px;
 }
 
-
 @media (max-width: 767px) {
   .btn {font-size: 14px}
   .btn-small {
@@ -56,5 +62,36 @@
     height: 63px;
     font-weight: 600;
     font-size: 22px;
+  }
+}
+
+//! Color button
+// Ghost button
+.btn-ghost {
+  background: transparent;
+  border-radius: var(--radius-12, 12px);
+  border: 1px solid var(--Stroke-Normal, #F00000);
+
+  color: var(--text-tx-red, #F00000);
+
+  &:hover {
+    border-radius: var(--radius-12, 12px);
+    border: 1px solid var(--Stroke-Normal, #F00000);
+    background: rgba(240, 0, 0, 0.15);
+    color: var(--text-tx-red, #F00000);
+  }
+
+  &:focus, &:active {
+    border-radius: var(--radius-12, 12px);
+    border: 2px solid var(--Stroke-Normal, #F00000);
+    background: var(--Pressed, #BD0000);
+    color: var(--text-tx-white, #FFF);
+  }
+
+  &.disabled {
+    border-radius: var(--radius-12, 12px);
+    border: 2px solid var(--Stroke-Light-Grey, #C8C8C8);
+    opacity: 0.5;
+    color: var(--Text-tx-light-grey, #8C8C8C);
   }
 }

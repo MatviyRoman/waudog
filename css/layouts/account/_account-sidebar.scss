@@ -14,6 +14,11 @@
         width: 100%;
         max-width: none;
         overflow-x: hidden;
+        margin-bottom: 52px;
+    }
+
+    @media (max-width: 767px) {
+        margin-bottom: 28px;
     }
 
     &__menu {
@@ -69,7 +74,7 @@
 
                 .account-sidebar {
                     &__link {
-                        color: var(--Text-tx-red, #F00000);
+                        color: var(--text-tx-red, #F00000);
                         text-align: center;
                         /* Body M/medium */
                         font-family: var(--font-family-Font-1, Montserrat);
@@ -84,7 +89,7 @@
 
                         svg {
                             path {
-                                stroke: var(--Text-tx-red, #F00000) !important;
+                                stroke: var(--text-tx-red, #F00000) !important;
                                 stroke: #F00000 !important;
                             }
                         }

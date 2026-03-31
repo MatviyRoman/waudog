@@ -1,0 +1,83 @@
+.item-wrap__colors {
+    // display: none;
+    // position: absolute;
+    // bottom: -30px;
+    // left: 50%;
+    // width: 100%;
+    // gap: 6px;
+    // margin-top: 8px;
+    // padding-top: 10px;
+    // padding-bottom: 10px;
+
+    transform: translateX(-50%);
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: var(--bg-white);
+
+    span {
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        transform: rotate(45deg);
+
+        &.active {
+            border-color: #000;
+        }
+    }
+
+    .color-1 {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--color-blue);
+            background-color: blue;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--color-yellow);
+            background-color: yellow;
+        }
+    }
+
+    .color-2, .color-3, .color-4, .color-5 {
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--color-blue);
+            background-color: orange;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            background: var(--color-yellow);
+            background-color: gray;
+        }
+    }
+}

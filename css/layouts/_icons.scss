@@ -57,4 +57,11 @@
   &.type-ico-30:before {content: '\e91d';}
   &.type-ico-31:before {content: '\e91e';}
   &.type-ico-32:before {content: '\e91f';}
+  &.type-ico-33:before { 
+    content: '';
+    width: 24px;
+    height: 24px;
+    background: url('/images/icons/eye.svg') no-repeat center;
+    background-size: contain;
+  }
 }

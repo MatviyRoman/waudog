@@ -5,6 +5,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 24px;
+    height: 24px;
   }
   &.ic-w-24 {
     &:before {
@@ -60,6 +62,16 @@
   &.type-ico-33:before {
     content: '';
     background: url('/images/icons/eye.svg') no-repeat center;
+    background-size: contain;
+  }
+  &.type-ico-34:before {
+    content: '';
+    background: url('/images/icons/pencil-square.svg') no-repeat center;
+    background-size: contain;
+  }
+  &.type-ico-35:before {
+    content: '';
+    background: url('/images/icons/key.svg') no-repeat center;
     background-size: contain;
   }
 }

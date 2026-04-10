@@ -163,8 +163,9 @@ main {
 
 @import "pages/all";
 @import "pages/index/index";
-@import "pages/viewed-products/viewed-products";
-@import "pages/orders/orders";
+@import "pages/account/viewed-products/viewed-products";
+@import "pages/account/orders/orders";
+@import "pages/account/account-personal/account-personal";
 
 @import "layouts/items";
 @import "layouts/items-blog";

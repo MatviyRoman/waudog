@@ -786,33 +786,41 @@
 
                             <!-- Персональна інформація -->
                             <div class="account-section">
-                                <h2 class="account-section__title account-section__title--main">Персональна інформація</h2>
+                                <h2 class="account-section__title account-section__title--main">Персональна інформація
+                                </h2>
 
                                 <div class="account-fields">
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-name">Ім'я</label>
-                                        <input class="account-field__input" type="text" id="field-name" name="name" value="Наталія" placeholder="Введіть ваше ім'я" autocomplete="given-name">
+                                        <input class="account-field__input" type="text" id="field-name" name="name"
+                                            value="Наталія" placeholder="Введіть ваше ім'я" autocomplete="given-name">
                                         <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-surname">Прізвище</label>
                                         <input class="account-field__input" type="text" id="field-surname"
-                                            name="surname" value="Танасова" placeholder="Введіть ваше прізвище" autocomplete="family-name">
+                                            name="surname" value="Танасова" placeholder="Введіть ваше прізвище"
+                                            autocomplete="family-name">
                                         <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-phone">Номер телефону</label>
-                                        <input class="account-field__input" type="tel" id="field-phone" name="phone" value="+38(095)022-84-64" placeholder="+38(0ХХ)ХХХ-ХХ-ХХ" autocomplete="tel">
+                                        <input class="account-field__input" type="tel" id="field-phone" name="phone"
+                                            value="+38(095)022-84-64" placeholder="+38(0ХХ)ХХХ-ХХ-ХХ"
+                                            autocomplete="tel">
                                         <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-email">Пошта</label>
-                                        <input class="account-field__input" type="email" id="field-email" name="email" value="email@gmail.com" placeholder="email@gmail.com" autocomplete="email">
+                                        <input class="account-field__input" type="email" id="field-email" name="email"
+                                            value="email@gmail.com" placeholder="email@gmail.com" autocomplete="email">
                                         <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field account-field--full">
                                         <label class="account-field__label" for="field-birthday">Дата народження</label>
-                                        <input class="account-field__input" type="text" id="field-birthday" name="birthday" value="12 грудня 1995" placeholder="Введіть вашу дату народження" autocomplete="bday">
+                                        <input class="account-field__input" type="text" id="field-birthday"
+                                            name="birthday" value="12 грудня 1995"
+                                            placeholder="Введіть вашу дату народження" autocomplete="bday">
                                         <div class="account-field__error"></div>
                                     </div>
                                 </div>
@@ -825,14 +833,16 @@
                                 <div class="account-fields">
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-region">Область</label>
-                                        <input class="account-field__input" type="text" id="field-region" name="region" value="Одеська область" placeholder="Введіть вашу область">
+                                        <input class="account-field__input" type="text" id="field-region" name="region"
+                                            value="Одеська область" placeholder="Введіть вашу область">
                                         <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-city">Населений пункт</label>
                                         <!--<input class="account-field__input" type="text" id="field-city" name="city"
                                             value="Одеса, Одеська область">-->
-                                        <input class="account-field__input" type="text" id="field-city" name="city" value="Одеса" placeholder="Введіть ваш населений пункт">
+                                        <input class="account-field__input" type="text" id="field-city" name="city"
+                                            value="Одеса" placeholder="Введіть ваш населений пункт">
                                         <div class="account-field__error"></div>
                                     </div>
                                 </div>
@@ -843,7 +853,8 @@
                                 <h2 class="account-section__title">Пароль</h2>
 
                                 <div class="account-password">
-                                    <button class="btn btn-small edit modal-button" type="button" aria-label="Змінити пароль" data-modal="change-password-modal">
+                                    <button class="btn btn-small edit modal-button" type="button"
+                                        aria-label="Змінити пароль" data-modal="change-password-modal">
                                         <span class="icon type-ico-35"></span>
                                         Змінити пароль
                                     </button>
@@ -1238,6 +1249,73 @@
         <div class="modal-close__bg"></div>
     </div>
 
+    <div class="modal" id="change-password-modal" style="display: none">
+        <div class="modal-container">
+            <div class="modal-close__button">
+                <div></div>
+            </div>
+            <!--<div class="modal-back__button icon type-ico-20 modal-button" data-modal="modal-restore-send"></div>-->
+            <div class="modal-container__content">
+                <div class="modal-container__content_title">Змінити пароль</div>
+                <div class="modal-container__content_title_text">Введіть пароль надісланий на пошту</div>
+                <div class="modal-container-group">
+                    <form action="">
+                        <div class="form-group modal-restore-password-code">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <div class="modal-login-restore-buttons">
+                                <span class="modal-login-restore-buttons__forgot">Не отримали листа?</span>
+                                <span class="modal-login-restore-buttons__restore">Надіслати повторно</span>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <button class="modal-button" data-modal="new-password-modal" type="submit">Змінити
+                                пароль</button>
+                            <!-- after submit for open modal restore run function openModal('modalId')-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-close__bg"></div>
+    </div>
+
+    <div class="modal" id="new-password-modal" style="display: none">
+        <div class="modal-container">
+            <div class="modal-close__button">
+                <div></div>
+            </div>
+            <div class="modal-back__button icon type-ico-20 modal-button" data-modal="change-password-modal"></div>
+            <div class="modal-container__content">
+                <div class="modal-container__content_title">Створіть новий пароль</div>
+                <div class="modal-container__content_title_text">Пароль має містити щонайменше 8 символів, включаючи
+                    великі й малі літери, цифри та спеціальні знаки (наприклад, ! @ # $ %)</div>
+                <div class="modal-container-group">
+                    <form action="">
+                        <div class="form-group">
+                            <input type="password" placeholder="Пароль">
+                            <span class="show-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Повторіть новий пароль">
+                            <span class="show-password"></span>
+                        </div>
+                        <div class="form-group d-flex justify-content-center">
+                            <button type="submit">Змінити пароль</button>
+                            <!-- after submit for open modal restore run function openModal('modalId')-->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-close__bg"></div>
+    </div>
+
     <script src="/js/items-swipe.js"></script>
     <script src="/js/swiper-bundle.min.js"></script>
     <script src="/js/script.js"></script>
@@ -1420,6 +1498,40 @@
                     if (input) input.focus();
                 }
             };
+
+            // =====================
+            // CHANGE PASSWORD
+            // =====================
+            document.querySelector('#change-password-modal form')
+                .addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const btn = this.querySelector('[data-modal]');
+                    const targetModalId = btn.dataset.modal;
+
+                    closeModal('change-password-modal');
+                    openModal(targetModalId);
+                });
+
+            function openModal(id) {
+                const modal = document.getElementById(id);
+                if (modal) {
+                    modal.style.display = 'flex';
+                    setTimeout(() => {
+                        modal.classList.add('visible');
+                    }, 10);
+                }
+            }
+
+            function closeModal(id) {
+                const modal = document.getElementById(id);
+                if (modal) {
+                    modal.classList.remove('visible');
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                    }, 150);
+                }
+            }
         });
     </script>
 </body>

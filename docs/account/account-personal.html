@@ -14,8 +14,8 @@
     <link rel="icon" type="image/png" sizes="256x256" href="/assets/256x256-C0K0A-C5.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/512x512-CVgdtLss.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script type="module" crossorigin src="/assets/main-CR_KLVUT.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-b_ukKxa1.css">
+  <script type="module" crossorigin src="/assets/main-kS5zc7FL.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-cL-p3EEp.css">
 </head>
 
 <body class="account-orders">
@@ -157,7 +157,8 @@
                                     <!--<?php /*if has counter add <i>N</i>*/ ?>-->
                                     <li><a href="#" class="header-center__actions_compare icon type-ico-10"><i>6</i></a>
                                     </li>
-                                    <li><a href="/account/favorites.html" class="header-center__actions_wishlist icon type-ico-11"></a></li>
+                                    <li><a href="/account/favorites.html"
+                                            class="header-center__actions_wishlist icon type-ico-11"></a></li>
                                     <li><a href="#" class="header-center__actions_account icon type-ico-12 modal-button"
                                             data-modal="modal-login"></a></li>
                                     <li><a href="#" class="header-center__actions_cart icon type-ico-13"></a></li>
@@ -713,11 +714,12 @@
                     <!-- Personal Account -->
                     <div class="col-12 col-lg-9 content">
 
-                        <!-- Personal Account Show -->
-                        <div class="account-personal">
+                        <!-- Personal Account Main -->
+                        <div class="account-personal account-personal--main">
                             <div class="account-personal__header">
                                 <h1 class="account-personal__title">Персональна інформація</h1>
-                                <button class="btn btn-small edit modal-button" type="button" aria-label="Редагувати дані" data-modal="modal-contact">
+                                <button class="btn btn-small edit modal-button" type="button"
+                                    aria-label="Редагувати дані">
                                     <span class="icon type-ico-34"></span>
                                     Редагувати дані
                                 </button>
@@ -728,23 +730,23 @@
                                 <div class="account-fields">
                                     <div class="account-field">
                                         <span class="account-field__label">Ім'я</span>
-                                        <span class="account-field__value">Наталія</span>
+                                        <span class="account-field__value" data-field="name">Наталія</span>
                                     </div>
                                     <div class="account-field">
                                         <span class="account-field__label">Прізвище</span>
-                                        <span class="account-field__value">Танасова</span>
+                                        <span class="account-field__value" data-field="surname">Танасова</span>
                                     </div>
                                     <div class="account-field">
                                         <span class="account-field__label">Номер телефону</span>
-                                        <span class="account-field__value">+38(095)022-84-64</span>
+                                        <span class="account-field__value" data-field="phone">+38(095)022-84-64</span>
                                     </div>
                                     <div class="account-field">
                                         <span class="account-field__label">Пошта</span>
-                                        <span class="account-field__value">email@gmail.com</span>
+                                        <span class="account-field__value" data-field="email">email@gmail.com</span>
                                     </div>
                                     <div class="account-field">
                                         <span class="account-field__label">Дата народження</span>
-                                        <span class="account-field__value">12 грудня 1995</span>
+                                        <span class="account-field__value" data-field="birthday">12 грудня 1995</span>
                                     </div>
                                 </div>
                             </div>
@@ -756,11 +758,12 @@
                                 <div class="account-fields">
                                     <div class="account-field">
                                         <span class="account-field__label">Область</span>
-                                        <span class="account-field__value">Одеська область</span>
+                                        <span class="account-field__value" data-field="region">Одеська область</span>
                                     </div>
                                     <div class="account-field">
                                         <span class="account-field__label">Населений пункт</span>
-                                        <span class="account-field__value">Одеса, Одеська область</span>
+                                        <!--<span class="account-field__value" data-field="city">Одеса, Одеська область</span>-->
+                                        <span class="account-field__value" data-field="city">Одеса</span>
                                     </div>
                                 </div>
                             </div>
@@ -770,47 +773,48 @@
                                 <h2 class="account-section__title account-section__title--password">Пароль</h2>
 
                                 <div class="account-password">
-                                    <button class="btn btn-small edit modal-button" type="button" aria-label="Змінити пароль" data-modal="modal-contact">
+                                    <button class="btn btn-small edit modal-button" type="button"
+                                        aria-label="Змінити пароль" data-modal="change-password-modal">
                                         <span class="icon type-ico-35"></span>
                                         Змінити пароль
                                     </button>
-
-                                
                                 </div>
                             </div>
                         </div>
 
                         <!-- Personal Account Edit -->
-                        <div class="account-personal d-none">
+                        <div class="account-personal account-personal--edit d-none">
 
                             <!-- Персональна інформація -->
                             <div class="account-section">
-                                <h2 class="account-section__title">Персональна інформація</h2>
+                                <h2 class="account-section__title account-section__title--main">Персональна інформація</h2>
 
                                 <div class="account-fields">
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-name">Ім'я</label>
-                                        <input class="account-field__input" type="text" id="field-name" name="name" value="Наталія"
-                                            autocomplete="given-name">
+                                        <input class="account-field__input" type="text" id="field-name" name="name" value="Наталія" placeholder="Введіть ваше ім'я" autocomplete="given-name">
+                                        <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-surname">Прізвище</label>
-                                        <input class="account-field__input" type="text" id="field-surname" name="surname" value="Танасова"
-                                            autocomplete="family-name">
+                                        <input class="account-field__input" type="text" id="field-surname"
+                                            name="surname" value="Танасова" placeholder="Введіть ваше прізвище" autocomplete="family-name">
+                                        <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-phone">Номер телефону</label>
-                                        <input class="account-field__input" type="tel" id="field-phone" name="phone" value="+38(095)022-84-64"
-                                            autocomplete="tel">
+                                        <input class="account-field__input" type="tel" id="field-phone" name="phone" value="+38(095)022-84-64" placeholder="+38(0ХХ)ХХХ-ХХ-ХХ" autocomplete="tel">
+                                        <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-email">Пошта</label>
-                                        <input class="account-field__input" type="email" id="field-email" name="email" value="email@gmail.com"
-                                            autocomplete="email">
+                                        <input class="account-field__input" type="email" id="field-email" name="email" value="email@gmail.com" placeholder="email@gmail.com" autocomplete="email">
+                                        <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field account-field--full">
                                         <label class="account-field__label" for="field-birthday">Дата народження</label>
-                                        <input class="account-field__input" type="text" id="field-birthday" name="birthday" value="12 грудня 1995">
+                                        <input class="account-field__input" type="text" id="field-birthday" name="birthday" value="12 грудня 1995" placeholder="Введіть вашу дату народження" autocomplete="bday">
+                                        <div class="account-field__error"></div>
                                     </div>
                                 </div>
                             </div>
@@ -822,11 +826,15 @@
                                 <div class="account-fields">
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-region">Область</label>
-                                        <input class="account-field__input" type="text" id="field-region" name="region" value="Одеська область">
+                                        <input class="account-field__input" type="text" id="field-region" name="region" value="Одеська область" placeholder="Введіть вашу область">
+                                        <div class="account-field__error"></div>
                                     </div>
                                     <div class="account-field">
                                         <label class="account-field__label" for="field-city">Населений пункт</label>
-                                        <input class="account-field__input" type="text" id="field-city" name="city" value="Одеса, Одеська область">
+                                        <!--<input class="account-field__input" type="text" id="field-city" name="city"
+                                            value="Одеса, Одеська область">-->
+                                        <input class="account-field__input" type="text" id="field-city" name="city" value="Одеса" placeholder="Введіть ваш населений пункт">
+                                        <div class="account-field__error"></div>
                                     </div>
                                 </div>
                             </div>
@@ -836,12 +844,8 @@
                                 <h2 class="account-section__title">Пароль</h2>
 
                                 <div class="account-password">
-                                    <button class="btn btn-ghost account-password__btn" type="button">
-                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.83-6.83c.405-.403.527-.999.43-1.563A6 6 0 1121.75 8.25z"
-                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
+                                    <button class="btn btn-small edit modal-button" type="button" aria-label="Змінити пароль" data-modal="change-password-modal">
+                                        <span class="icon type-ico-35"></span>
                                         Змінити пароль
                                     </button>
                                 </div>
@@ -849,8 +853,12 @@
 
                             <!-- Кнопки дій -->
                             <div class="account-actions">
-                                <button class="btn btn-outline account-actions__cancel" type="button">Скасувати</button>
-                                <button class="btn btn-primary account-actions__save" type="button">Зберегти зміни</button>
+                                <button class="btn btn-outline btn-ghost account-actions__cancel" type="button">
+                                    <!--Скасувати-->
+                                    Відмінити зміни
+                                </button>
+                                <button class="btn btn-primary account-actions__save" type="button">Зберегти
+                                    зміни</button>
                             </div>
                         </div>
 
@@ -877,7 +885,8 @@
                         <div class="col-4 col-xxl-auto">
                             <div class="home-advantages__item">
                                 <div class="home-advantages__item_img icon type-ico-31"></div>
-                                <div class="home-advantages__item_text d-none d-lg-block">З турботою та любовью до хвостиків</div>
+                                <div class="home-advantages__item_text d-none d-lg-block">З турботою та любовью до
+                                    хвостиків</div>
                                 <div class="home-advantages__item_text d-lg-none">З турботою до хвостиків</div>
                             </div>
                         </div>
@@ -885,7 +894,8 @@
                     <div class="home-advantages__bg_pic">
                         <picture>
                             <!--92x108-->
-                            <source media="(max-width: 991px)" srcset="data:image/webp;base64,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">
+                            <source media="(max-width: 991px)"
+                                srcset="data:image/webp;base64,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">
                             <!--238x180-->
                             <img src="/assets/advantage-pic-DyXYxYZO.webp" width="238" height="180" alt="Наші переваги">
                         </picture>
@@ -1233,7 +1243,6 @@
     <script src="/js/swiper-bundle.min.js"></script>
     <script src="/js/script.js"></script>
     <script>
-
         // scroll to active item
         document.addEventListener('DOMContentLoaded', function () {
             const menu = document.querySelector('.account-sidebar__menu');
@@ -1246,6 +1255,172 @@
                     inline: 'center' // center the item horizontally if it's in a horizontal menu
                 });
             }
+        });
+
+        // account personal edit logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const openBtn = document.querySelector('.account-personal--main .btn.edit');
+
+            const mainBlock = document.querySelector('.account-personal--main');
+            const editBlock = document.querySelector('.account-personal--edit');
+
+            const cancelBtn = editBlock.querySelector('.account-actions__cancel');
+            const saveBtn = editBlock.querySelector('.account-actions__save');
+
+            const phoneInput = editBlock.querySelector('input[name="phone"]');
+
+            const scrollToMain = () => {
+                mainBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            };
+
+            // =====================
+            // PHONE FORMAT
+            // =====================
+            const getDigits = (value) => {
+                const hasPlus = value.trim().startsWith('+');
+                const digits = value.replace(/\D/g, '');
+                return hasPlus ? '+' + digits : digits;
+            };
+
+            phoneInput.addEventListener('input', (e) => {
+                const digits = getDigits(e.target.value);
+                e.target.value = digits;
+            });
+
+            // =====================
+            // ERRORS
+            // =====================
+            const setError = (input, message) => {
+                const field = input.closest('.account-field');
+                const errorEl = field.querySelector('.account-field__error');
+
+                field.classList.add('is-error');
+                if (errorEl) errorEl.textContent = message;
+            };
+
+            const clearError = (input) => {
+                const field = input.closest('.account-field');
+                const errorEl = field.querySelector('.account-field__error');
+
+                field.classList.remove('is-error');
+                if (errorEl) errorEl.textContent = '';
+            };
+
+            // =====================
+            // VALIDATE
+            // =====================
+            const validate = () => {
+                let isValid = true;
+
+                const inputs = editBlock.querySelectorAll('input[name]');
+
+                inputs.forEach(input => {
+                    clearError(input);
+                    const value = input.value.trim();
+
+                    switch (input.name) {
+                        case 'name':
+                        case 'surname':
+                            if (!/^[a-zA-Zа-яА-ЯіІїЇєЄ\s'-]+$/.test(value)) {
+                                setError(input, 'можна вводити тільки літери');
+                                isValid = false;
+                            }
+                            break;
+
+                        case 'phone':
+                            const digits = getDigits(value);
+
+                            if (digits.length <= 9) {
+                                setError(input, 'номер має містити мінімум 10 цифр');
+                                isValid = false;
+                            }
+                            break;
+
+                        case 'email':
+                            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                                setError(input, 'пошта має містити знак @');
+                                isValid = false;
+                            }
+                            break;
+
+                        case 'birthday':
+                            if (!value) {
+                                setError(input, 'вкажіть дату народження');
+                                isValid = false;
+                            }
+                            break;
+
+                        case 'region':
+                        case 'city':
+                            if (!value) {
+                                setError(input, 'обовʼязкове поле');
+                                isValid = false;
+                            }
+                            break;
+                    }
+                });
+
+                return isValid;
+            };
+
+            // =====================
+            // LIVE CLEAR ERRORS
+            // =====================
+            editBlock.querySelectorAll('input').forEach(input => {
+                input.addEventListener('input', () => clearError(input));
+            });
+
+            // =====================
+            // OPEN EDIT
+            // =====================
+            openBtn.addEventListener('click', () => {
+                mainBlock.classList.add('d-none');
+                editBlock.classList.remove('d-none');
+            });
+
+            // =====================
+            // CANCEL
+            // =====================
+            cancelBtn.addEventListener('click', () => {
+                editBlock.classList.add('d-none');
+                mainBlock.classList.remove('d-none');
+                scrollToMain();
+            });
+
+            // =====================
+            // SAVE
+            // =====================
+            saveBtn.addEventListener('click', () => {
+                if (!validate()) {
+                    scrollToFirstError();
+                    return;
+                }
+
+                const inputs = editBlock.querySelectorAll('input[name]');
+                inputs.forEach(input => {
+                    const target = mainBlock.querySelector(`[data-field="${input.name}"]`);
+                    if (target) target.textContent = input.value;
+                });
+
+                editBlock.classList.add('d-none');
+                mainBlock.classList.remove('d-none');
+                scrollToMain();
+            });
+
+            // scroll to first error in edit form
+            const scrollToFirstError = () => {
+                const firstError = editBlock.querySelector('.account-field.is-error');
+
+                if (firstError) {
+                    firstError.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+
+                    const input = firstError.querySelector('input, select, textarea');
+                    if (input) input.focus();
+                }
+            };
         });
     </script>
 </body>

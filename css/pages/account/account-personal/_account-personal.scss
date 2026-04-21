@@ -11,7 +11,6 @@
 
         @media (max-width: 991px) {
             flex-wrap: wrap;
-
             justify-content: center;
             flex-direction: column;
         }
@@ -123,6 +122,193 @@
 
             @media (max-width: 991px) {
                 width: 100%;
+            }
+
+            &:hover {
+                background: var(--BG-Grey-Light, #F8F9FD);
+            }
+
+            &:focus, &:active {
+                border: 2px solid var(--Stroke, #EAEDF7);
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+.account-personal--edit {
+    .account-section {
+        &__title {
+            color: var(--text-tx-black, #000);
+            font-family: var(--font-family-Font-1, Montserrat);
+            font-size: var(--font-size-26, 26px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: 135%;
+
+            @media (max-width: 991px) {
+                font-size: var(--font-size-18, 18px);
+                line-height: normal;
+
+                &--main {
+                    font-size: var(--font-size-24, 24px);
+                }
+            }
+
+            @media (max-width: 767px) {
+                &:not(&--main) {
+                    margin-top: 28px;
+                }
+            }
+        }
+
+        .account-fields {
+            gap: 16px;
+
+            .account-field {
+                position: relative;
+                margin-bottom: 20px;
+                border-radius: var(--borderRadius, 4px);
+                border: 1px solid var(--foundation-gray-dark-hover, #8C8E94);
+                padding: 16px 12px;
+                max-height: 58px;
+                height: 100%;
+
+                padding: 0;
+                width: calc(50% - 8px);
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                    margin-bottom: 0;
+                }
+
+                &.is-error {
+                    @media (max-width: 767px) {
+                        width: 100%;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                &__label {
+                    position: absolute;
+                    left: 10px;
+                    top: -7px;
+                    margin: 0;
+                    background: var(--bg-grey-light);
+                    padding: 0 4px;
+                }
+
+                &__input {
+                    border: 1px solid transparent;
+                    color: var(--text-tx-black, #000);
+                    font-family: var(--font-family-Font-1, Montserrat);
+                    font-size: var(--font-size-16, 16px);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 160%;
+                    height: 58px;
+
+                    &::placeholder {
+                        color: var(--Text-tx-light-grey, #8C8C8C);
+                        font-family: var(--font-family-Font-1, Montserrat);
+                        font-size: var(--font-size-16, 16px);
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 150%;
+                    }
+
+                    &:focus {
+                        border-radius: var(--borderRadius, 2px);
+                        border: 1px solid var(--Foundation-Blue-Normal, #4285F4);
+                    }
+                }
+
+                &__error {
+                    position: absolute;
+                    bottom: -18px;
+                    left: 14px;
+                    color: var(--text-tx-red, #F00000);
+                    font-family: var(--font-family-Font-1, Montserrat);
+                    font-size: var(--font-size-12, 12px);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 120%;
+                }
+
+                &:has(:focus) {
+                    border: 1px solid var(--Foundation-Blue-Normal, #4285F4);
+
+                    .account-field__label {
+                        color: var(--Foundation-Blue-Normal, #4285F4);
+                        font-family: var(--font-family-Font-1, Montserrat);
+                        font-size: var(--font-size-12, 12px);
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                    }
+                }
+
+                &:has(.account-field__error:not(:empty)) {
+                    border-radius: var(--borderRadius, 4px);
+                    border: 1px solid var(--Foundation-Red-Dark, #B40000);
+
+                    .account-field__label {
+                        color: var(--Foundation-Red-Dark, #B40000);
+                    }
+                }
+            }
+        }
+    }
+
+    .account-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+
+        @media (max-width: 991px) {
+            margin-top: 28px;
+        }
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
+        .btn {
+            @media (max-width: 991px) {
+                width: 50%;
+            }
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+
+        &__cancel {
+            border-radius: var(--radius-12, 12px);
+            border: 1px solid var(--Stroke, #EAEDF7);
+            background: var(--BG-Grey-Light, #F8F9FD);
+
+            border-radius: var(--radius-12, 12px);
+            border: 1px solid var(--Stroke-Normal, #F00000);
+
+            &:hover {
+                border: 1px solid var(--Stroke-Normal, #F00000);
+                background: rgba(240, 0, 0, 0.15);
+            }
+
+            &:focus, &:active{
+                border-radius: var(--radius-12, 12px);
+                border: 2px solid var(--Stroke-Normal, #F00000);
+                background: var(--Pressed, #BD0000);
+            }
+        }
+
+        &__save {
+            margin-left: 12px;
+
+            @media (max-width: 767px) {
+                margin-left: 0;
+                margin-top: 16px;
             }
         }
     }

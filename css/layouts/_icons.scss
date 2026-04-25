@@ -78,4 +78,11 @@
     width: 24px;
     height: 24px;
   }
+  &.type-ico-36:before {
+    content: '';
+    background: url('/images/icons/exit.svg') no-repeat center;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+  }
 }
